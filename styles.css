@@ -1,0 +1,286 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f3f4f6; /* Tailwind bg-gray-100 */
+    color: #1f2937; /* Tailwind text-gray-900 */
+    line-height: 1.5;
+}
+
+/* Layout */
+.container {
+    max-width: 1280px; /* Tailwind max-w-7xl */
+    margin: 0 auto;
+    padding: 0 16px; /* Tailwind px-4 */
+}
+
+/* Typography */
+.text-3xl {
+    font-size: 1.875rem; /* Tailwind text-3xl */
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* Tailwind text-2xl */
+}
+
+.text-lg {
+    font-size: 1.125rem; /* Tailwind text-lg */
+}
+
+.font-bold {
+    font-weight: 700; /* Tailwind font-bold */
+}
+
+.font-semibold {
+    font-weight: 600; /* Tailwind font-semibold */
+}
+
+.font-medium {
+    font-weight: 500; /* Tailwind font-medium */
+}
+
+/* Colors */
+.bg-gray {
+    background-color: #f3f4f6; /* Tailwind bg-gray-100 */
+}
+
+.bg-blue {
+    background-color: #2563eb; /* Tailwind bg-blue-600 */
+}
+
+.bg-blue-light {
+    background-color: #dbeafe; /* Tailwind bg-blue-100 */
+}
+
+.bg-green-light {
+    background-color: #dcfce7; /* Tailwind bg-green-100 */
+}
+
+.bg-dark {
+    background-color: #1f2937; /* Tailwind bg-gray-800 */
+}
+
+.text-white {
+    color: #ffffff; /* Tailwind text-white */
+}
+
+.text-gray-700 {
+    color: #4b5563; /* Tailwind text-gray-700 */
+}
+
+.text-red {
+    color: #dc2626; /* Tailwind text-red-600 */
+}
+
+.text-green {
+    color: #16a34a; /* Tailwind text-green-600 */
+}
+
+/* Spacing */
+.py-4 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.py-8 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.mt-8 {
+    margin-top: 32px;
+}
+
+.mt-12 {
+    margin-bottom: 48px;
+}
+
+.mb-4 {
+    margin-bottom: 16px;
+}
+
+.mb-12 {
+    margin-bottom: 48px;
+}
+
+/* Components */
+.card {
+    background-color: #ffffff; /* Tailwind bg-white */
+    padding: 24px; /* Tailwind p-6 */
+    border-radius: 8px; /* Tailwind rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Tailwind shadow */
+}
+
+.input {
+    width: 100%;
+    padding: 8px; /* Tailwind p-2 */
+    border: 1px solid #d1d5db; /* Tailwind border-gray-300 */
+    border-radius: 6px; /* Tailwind rounded-md */
+    font-size: 1rem;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #2563eb; /* Tailwind border-blue-600 */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); /* Tailwind focus:ring */
+}
+
+.btn {
+    padding: 8px 16px; /* Tailwind py-2 px-4 */
+    border: none;
+    border-radius: 6px; /* Tailwind rounded-lg */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #2563eb; /* Tailwind bg-blue-600 */
+    color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #1d4ed8; /* Tailwind hover:bg-blue-700 */
+}
+
+.btn-danger {
+    background-color: #dc2626; /* Tailwind bg-red-600 */
+    color: #ffffff;
+}
+
+.btn-danger:hover:not(:disabled) {
+    background-color: #b91c1c; /* Tailwind hover:bg-red-700 */
+}
+
+.btn:disabled {
+    opacity: 0.5; /* Tailwind disabled:opacity-50 */
+    cursor: not-allowed;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+/* Lists */
+.list-disc {
+    list-style-type: disc;
+}
+
+.pl-5 {
+    padding-left: 20px;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 12px; /* Tailwind p-3 */
+}
+
+.table-header {
+    background-color: #e5e7eb; /* Tailwind bg-gray-200 */
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+/* Charts */
+.chart-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px; /* Tailwind gap-6 */
+}
+
+@media (min-width: 768px) {
+    .chart-grid {
+        grid-template-columns: 1fr 1fr; /* Tailwind md:grid-cols-2 */
+    }
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.h-5 {
+    height: 20px;
+}
+
+.w-5 {
+    width: 20px;
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .text-3xl {
+        font-size: 1.5rem;
+    }
+
+    .text-2xl {
+        font-size: 1.25rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+    }
+}
